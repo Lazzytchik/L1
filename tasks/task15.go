@@ -15,7 +15,6 @@ func main() {
 	log.Println(justString)
 	someFunc()
 	log.Println(justString, len(justString))
-	log.Println(justString + "dude")
 }
 
 func someFunc() {
