@@ -7,6 +7,12 @@ import (
 
 /*
 	21. Реализовать паттерн «адаптер» на любом примере.
+
+	Две структуры Int и String e обоих есть метод GetValue()
+	И структура StringReverser которая принимает только тип Stringer (не путать со стандартным) определяющий метод GetValue() string.
+	Однако у Int есть лишь метод GetValue() int.
+	Поэтому мы сделаем адаптер IntAdapter который будет реализовывать метод GetValue() string, конвертируя int в string с помощью strconv.Itoa()
+	Таким образом мы можем отдать в качестве параметра адаптер вместо Int в StringReverser.Reverse()
 */
 
 func main() {

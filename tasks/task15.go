@@ -33,7 +33,7 @@ func someFunc() {
 
 func someFuncUpdated() {
 	v := createHugeString(1 << 10)
-	//justString = strings.Clone(v[:100])
+	//justString = strings.Clone(v[:100]) // Вариант с пакетом strings
 	b := make([]byte, 100)
 	copy(b, v[:100])
 	justString = string(b)
