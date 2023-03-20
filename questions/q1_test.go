@@ -1,12 +1,14 @@
 package main
 
-//	Самый эффективный способ конкатенации строе
-
 import (
 	"bytes"
 	"strings"
 	"testing"
 )
+
+//	Самый эффективный способ конкатенации строк
+//	strings.Builder начиная с Go 1.10 самый эффективный способ.
+//  До Go 1.10 самый эффективный способ bytes.Buffer
 
 // BenchmarkOperatorConcat Конкатенация при помощи строкового оператора +
 func BenchmarkOperatorConcat(b *testing.B) {
